@@ -1,0 +1,940 @@
+<assessment>
+	<section>
+		<sectionInfo>
+			<title>Outreach results:</title>
+		</sectionInfo>
+		<question>
+			<text>Outreach Method:</text>
+			<response varName="s1-q1">
+				<fixed>
+					<category>
+						<label>Phone</label>
+						<value>Phone</value>
+					</category>
+					<category>
+						<label>Contacted Insurance</label>
+						<value>Contacted Insurance</value>
+					</category>
+					<category>
+						<label>MyHealth+ Message</label>
+						<value>MyHealth+ Message</value>
+					</category>
+					<category>
+						<label>Letter Sent</label>
+						<value>Letter Sent</value>
+					</category>
+					<category>
+						<label>Records Requested</label>
+						<value>Records Requested</value>
+					</category>
+					<category>
+						<label>Records Received</label>
+						<value>Records Received</value>
+					</category>
+					<category>
+						<label>Presented to care team</label>
+						<value>Presented to care team</value>
+					</category>
+					<category>
+						<label>Pre Visit Planning (No Outreach)</label>
+						<value>Pre Visit Planning (No Outreach)</value>
+					</category>
+					<category>
+						<label>Outreach not needed at this time</label>
+						<value>Outreach not needed at this time</value>
+					</category>
+				</fixed>
+			</response>
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Phone</value>
+			</conditionalCheck> 
+			<text>What was the result of the outreach?</text>
+			<response varName="s1-q2">
+				<fixed>
+					<category>
+						<label>Made contact</label>
+						<value>Made contact</value>
+					</category>
+					<category>
+						<label>Left Voicemail</label>
+						<value>Left Voicemail</value>
+					</category>
+					<category>
+						<label>Unable to Contact</label>
+						<value>Unable to Contact</value>
+						<contingentQuestion varName="s1-q1-r3-nested">
+							<text>Explain:</text>
+						</contingentQuestion>
+					</category>
+					<category>
+						<label>Declined Further Management (Do Not Call)</label>
+						<value>Declined Further Management (Do Not Call)</value>
+					</category>
+					<category>
+						<label>Deceased</label>
+						<value>Deceased</value>
+						<contingentQuestion varName="s1-q2-r5-nested">
+							<text>Date: mm/dd/yyyy</text>
+						</contingentQuestion>
+					</category>
+					<category>
+						<label>Hospice</label>
+						<value>Hospice</value>
+					</category>
+					<category>
+						<label>Invalid phone number(s)</label>
+						<value>Invalid phone number(s)</value>
+					</category>
+					<category>
+						<label>Refused to verify information</label>
+						<value>Refused to verify information</value>
+					</category>
+					<category>
+						<label>Changed Insurance/Termed</label>
+						<value>Changed Insurance/Termed</value>
+					</category>
+					<category>
+						<label>Changed PCP</label>
+						<value>Changed PCP</value>
+						<contingentQuestion varName="s1-q2-r10-nested">
+							<text>New PCP name:</text>
+						</contingentQuestion>
+					</category>
+					<category>
+						<label>Moved out of service area</label>
+						<value>Moved out of service area</value>
+					</category>
+				</fixed>
+			</response>
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Made contact</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Left Voicemail</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Unable to Contact</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Declined Further Management (Do Not Call)</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Invalid phone number(s)</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Refused to verify information</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Changed Insurance/Termed</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Changed PCP</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Moved out of service area</value>
+			</conditionalCheck>
+			<text>What Phone method was used to reach the patient?:</text>
+			<response varName="s1-q3">
+				<fixed>
+					<category>
+						<label>Doximity</label>
+						<value>Doximity</value>
+					</category>
+					<category>
+						<label>Avaya Agent (Grey Icon)</label>
+						<value>Avaya Agent (Grey Icon)</value>
+					</category>
+					<category>
+						<label>Avaya One-X (Red icon)</label>
+						<value>Avaya One-X (Red icon)</value>
+					</category>
+				</fixed>
+			</response>
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Made contact</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Left Voicemail</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Unable to Contact</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Declined Further Management (Do Not Call)</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Invalid phone number(s)</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Refused to verify information</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Changed Insurance/Termed</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Changed PCP</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Moved out of service area</value>
+			</conditionalCheck>
+			<text>Patient Phone Numbers used:</text>
+			<response varName="s1-q4-r1">
+				<fixed>
+					<category>
+						<label>Cell:</label>
+						<value>Cell:</value>
+						<contingentQuestion varName="s1-q4-r1-nested">
+							<text>###-###-####</text>
+						</contingentQuestion>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q4-r2">
+				<fixed>
+					<category>
+						<label>Home:</label>
+						<value>Home:</value>
+						<contingentQuestion varName="s1-q4-r2-nested">
+							<text>###-###-####</text>
+						</contingentQuestion>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q4-r3">
+				<fixed>
+					<category>
+						<label>Work:</label>
+						<value>Work:</value>
+						<contingentQuestion varName="s1-q4-r3-nested">
+							<text>###-###-####</text>
+						</contingentQuestion>
+					</category>
+				</fixed>
+			</response>
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Contacted Insurance</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>MyHealth+ Message</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Letter Sent</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Pre Visit Planning (No Outreach)</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Outreach not needed at this time</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Made contact</value>
+			</conditionalCheck> 
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Left Voicemail</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Unable to Contact</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Declined Further Management (Do Not Call)</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Invalid phone number</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Refused to verify information</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q2</questionId>
+				<operator>==</operator>
+				<value>Letter Sent</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Records Requested</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Records Received</value>
+			</conditionalCheck>
+			<conditionalCheck>
+				<questionId>s1-q1</questionId>
+				<operator>==</operator>
+				<value>Presented to care team</value>
+			</conditionalCheck>
+			<text>Care Gaps or Social?:</text>
+			<response varName="s1-q5-r1">
+				<fixed>
+					<category>
+						<label>Care Gaps</label>
+						<value>Care Gaps</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q5-r2">
+				<fixed>
+					<category>
+						<label>Social Needs</label>
+						<value>Social Needs</value>
+					</category>
+				</fixed>
+			</response>
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q5-r1</questionId>
+				<operator>==</operator>
+				<value>Care Gaps</value>
+			</conditionalCheck>
+			<text>Care Gaps attempted or addressed:</text>
+			<response varName="s1-q6-r1">
+				<fixed>
+					<category>
+						<label>Annual Wellness Visit</label>
+						<value>Annual Wellness Visit</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r2">
+				<fixed>
+					<category>
+						<label>Breast Cancer Screening</label>
+						<value>Breast Cancer Screening</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r3">
+				<fixed>
+					<category>
+						<label>Cervical Cancer Screening</label>
+						<value>Cervical Cancer Screening</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q6-r4">
+				<fixed>
+					<category>
+						<label>Colorectal Cancer Screening</label>
+						<value>Colorectal Cancer Screening</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r5">
+				<fixed>
+					<category>
+						<label>COVID-19 Vaccine</label>
+						<value>COVID-19 Vaccine</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q6-r6">
+				<fixed>
+					<category>
+						<label>Depression Screening</label>
+						<value>Depression Screening</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r7">
+				<fixed>
+					<category>
+						<label>DEXA Screening</label>
+						<value>DEXA Screening</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r8">
+				<fixed>
+					<category>
+						<label>Diabetic Clinic Visit</label>
+						<value>Diabetic Clinic Visit</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q6-r9">
+				<fixed>
+					<category>
+						<label>Diabetic Eye Exam</label>
+						<value>Diabetic Eye Exam</value>
+					</category>
+				</fixed>
+			</response>
+  			<response varName="s1-q6-r10">
+				<fixed>
+					<category>
+						<label>eAsthma Tracker</label>
+						<value>eAsthma Tracker</value>
+					</category>
+				</fixed>
+			</response>          
+			<response varName="s1-q6-r11">
+				<fixed>
+					<category>
+						<label>Flu Vaccine</label>
+						<value>Flu Vaccine</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q6-r12">
+				<fixed>
+					<category>
+						<label>HbA1c check</label>
+						<value>HbA1c check</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r13">
+				<fixed>
+					<category>
+						<label>Hypertension</label>
+						<value>Hypertension</value>
+					</category>
+				</fixed>
+			</response>
+            <response varName="s1-q6-r14">
+				<fixed>
+					<category>
+						<label>KPI Dashboard</label>
+						<value>KPI Dashboard</value>
+					</category>
+				</fixed>
+			</response>	
+			<response varName="s1-q6-r15">
+				<fixed>
+					<category>
+						<label>MyHealth+ encouragement</label>
+						<value>MyHealth+ encouragement</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q6-r16">
+				<fixed>
+					<category>
+						<label>Nephropathy Monitoring</label>
+						<value>Nephropathy Monitoring</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r17">
+				<fixed>
+					<category>
+						<label>PCP New Patient Visit</label>
+						<value>PCP New Patient Visit</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q6-r18">
+				<fixed>
+					<category>
+						<label>Physical Annual Exam</label>
+						<value>Physical Annual Exam</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r19">
+				<fixed>
+					<category>
+						<label>Pre DM clinic visit</label>
+						<value>Pre DM clinic visit</value>
+					</category>
+				</fixed>
+			</response>	
+  			<response varName="s1-q6-r20">
+				<fixed>
+					<category>
+						<label>Referral</label>
+						<value>Referral</value>
+					</category>
+				</fixed>
+			</response>	          				
+			<response varName="s1-q6-r21">
+				<fixed>
+					<category>
+						<label>Statin Therapy - Diabetic Group</label>
+						<value>Statin Therapy - Diabetic Group</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r22">
+				<fixed>
+					<category>
+						<label>Transition of Care</label>
+						<value>Transition of Care</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q6-r23">
+				<fixed>
+					<category>
+						<label>Well Child Check</label>
+						<value>Well Child Check</value>
+					</category>
+				</fixed>
+			</response>			
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q5-r2</questionId>
+				<operator>==</operator>
+				<value>Social Needs</value>
+			</conditionalCheck>
+			<text>Social needs attempted or addressed:</text>
+			<response varName="s1-q7-r1">
+				<fixed>
+					<category>
+						<label>Algorex Nutritional Security Campaign</label>
+						<value>Algorex Nutritional Security Campaign</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q7-r2">
+				<fixed>
+					<category>
+						<label>CM patient outreach</label>
+						<value>CM patient outreach</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q7-r3">
+				<fixed>
+					<category>
+						<label>Durable Medical Equipment</label>
+						<value>Durable Medical Equipment</value>
+					</category>
+				</fixed>
+			</response>	
+			<response varName="s1-q7-r4">
+				<fixed>
+					<category>
+						<label>Financial Assistance</label>
+						<value>Financial Assistance</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q7-r5">
+				<fixed>
+					<category>
+						<label>Housing/Food Resources</label>
+						<value>Housing/Food Resources</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q7-r6">
+				<fixed>
+					<category>
+						<label>Medicaid/Medicare Enrollment Resources</label>
+						<value>Medicaid/Medicare Enrollment Resources</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q7-r7">
+				<fixed>
+					<category>
+						<label>Medication Assistance</label>
+						<value>Medication Assistance</value>
+					</category>
+				</fixed>
+			</response>				
+			<response varName="s1-q7-r8">
+				<fixed>
+					<category>
+						<label>Mental Health Integration</label>
+						<value>Mental Health Integration</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q7-r9">
+				<fixed>
+					<category>
+						<label>MyHealth+ encouragement</label>
+						<value>MyHealth+ encouragement</value>
+					</category>
+				</fixed>
+			</response>					
+			<response varName="s1-q7-r10">
+				<fixed>
+					<category>
+						<label>Other Resources</label>
+						<value>Other Resources</value>
+					</category>
+				</fixed>
+			</response>		
+			<response varName="s1-q7-r11">
+				<fixed>
+					<category>
+						<label>Pre-DM Shared Decision Making</label>
+						<value>Pre-DM Shared Decision Making</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q7-r12">
+				<fixed>
+					<category>
+						<label>Transition of Care</label>
+						<value>Transition of Care</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q7-r13">
+				<fixed>
+					<category>
+						<label>Transportation Assistance</label>
+						<value>Transportation Assistance</value>
+					</category>
+				</fixed>
+			</response>
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q5-r1</questionId>
+				<operator>==</operator>
+				<value>Care Gaps</value>
+			</conditionalCheck>
+			<text>Care Gaps Scheduled:</text>
+			<response varName="s1-q8-r1">
+				<fixed>
+					<category>
+						<label>Annual Wellness Visit</label>
+						<value>Annual Wellness Visit</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q8-r2">
+				<fixed>
+					<category>
+						<label>Breast Cancer Screening</label>
+						<value>Breast Cancer Screening</value>
+					</category>
+				</fixed>
+			</response>	
+			<response varName="s1-q8-r3">
+				<fixed>
+					<category>
+						<label>Cervical Cancer Screening</label>
+						<value>Cervical Cancer Screening</value>
+					</category>
+				</fixed>
+			</response>		
+			<response varName="s1-q8-r4">
+				<fixed>
+					<category>
+						<label>Colorectal Cancer Screening</label>
+						<value>Colorectal Cancer Screening</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q8-r5">
+				<fixed>
+					<category>
+						<label>COVID-19 Vaccine</label>
+						<value>COVID-19 Vaccine</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q8-r6">
+				<fixed>
+					<category>
+						<label>Depression Screening</label>
+						<value>Depression Screening</value>
+					</category>
+				</fixed>
+			</response>		
+			<response varName="s1-q8-r7">
+				<fixed>
+					<category>
+						<label>DEXA Screening</label>
+						<value>DEXA Screening</value>
+					</category>
+				</fixed>
+			</response>	
+			<response varName="s1-q8-r8">
+				<fixed>
+					<category>
+						<label>Diabetic Clinic Visit</label>
+						<value>Diabetic Clinic Visit</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q8-r9">
+				<fixed>
+					<category>
+						<label>Diabetic Eye Exam</label>
+						<value>Diabetic Eye Exam</value>
+					</category>
+				</fixed>
+			</response>
+   			<response varName="s1-q8-r10">
+				<fixed>
+					<category>
+						<label>eAsthma Tracker</label>
+						<value>eAsthma Tracker</value>
+					</category>
+				</fixed>
+			</response>             		
+			<response varName="s1-q8-r11">
+				<fixed>
+					<category>
+						<label>FIT Kit requested</label>
+						<value>FIT Kit requested</value>
+					</category>
+				</fixed>
+			</response>				
+			<response varName="s1-q8-r12">
+				<fixed>
+					<category>
+						<label>Flu Vaccine</label>
+						<value>Flu Vaccine</value>
+					</category>
+				</fixed>
+			</response>				
+			<response varName="s1-q8-r13">
+				<fixed>
+					<category>
+						<label>HbA1c check</label>
+						<value>HbA1c check</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q8-r14">
+				<fixed>
+					<category>
+						<label>Hypertension</label>
+						<value>Hypertension</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q8-r15">
+				<fixed>
+					<category>
+						<label>Nephropathy Monitoring</label>
+						<value>Nephropathy Monitoring</value>
+					</category>
+				</fixed>
+			</response>						
+			<response varName="s1-q8-r16">
+				<fixed>
+					<category>
+						<label>None</label>
+						<value>None</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q8-r17">
+				<fixed>
+					<category>
+						<label>PCP New Patient Visit</label>
+						<value>PCP New Patient Visit</value>
+					</category>
+				</fixed>
+			</response>					
+			<response varName="s1-q8-r18">
+				<fixed>
+					<category>
+						<label>Physical Annual Exam</label>
+						<value>Physical Annual Exam</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q8-r19">
+				<fixed>
+					<category>
+						<label>Pre DM clinic visit</label>
+						<value>Pre DM clinic visit</value>
+					</category>
+				</fixed>	
+			</response>	
+   			<response varName="s1-q8-r20">
+				<fixed>
+					<category>
+						<label>Referral</label>
+						<value>Referral</value>
+					</category>
+				</fixed>
+			</response>	               				
+			<response varName="s1-q8-r21">
+				<fixed>
+					<category>
+						<label>Statin Therapy - Diabetic Group</label>
+						<value>Statin Therapy - Diabetic Group</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q8-r22">
+				<fixed>
+					<category>
+						<label>Transition of Care</label>
+						<value>Transition of Care</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q8-r23">
+				<fixed>
+					<category>
+						<label>Well Child Check</label>
+						<value>Well Child Check</value>
+					</category>
+				</fixed>
+			</response>			
+		</question>
+		<question>
+			<conditionalCheck>
+				<questionId>s1-q7-r11</questionId>
+				<operator>==</operator>
+				<value>Pre-DM Shared Decision Making</value>
+			</conditionalCheck>
+			<text>Result of Shared Decision Making:</text>
+			<response varName="s1-q9-r1">
+				<fixed>
+					<category>
+						<label>Metformin</label>
+						<value>Metformin</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q9-r2">
+				<fixed>
+					<category>
+						<label>Not PreDiabetic</label>
+						<value>Not PreDiabetic</value>
+					</category>
+				</fixed>
+			</response>
+			<response varName="s1-q9-r3">
+				<fixed>
+					<category>
+						<label>Nutrition Therapy</label>
+						<value>Nutrition Therapy</value>
+					</category>
+				</fixed>
+			</response>	
+			<response varName="s1-q9-r4">
+				<fixed>
+					<category>
+						<label>Omada</label>
+						<value>Omada</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q9-r5">
+				<fixed>
+					<category>
+						<label>PreDiabetes 101</label>
+						<value>PreDiabetes 101</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q9-r6">
+				<fixed>
+					<category>
+						<label>Shared Decision Making with PCP</label>
+						<value>Shared Decision Making with PCP</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q9-r7">
+				<fixed>
+					<category>
+						<label>Weigh to Health</label>
+						<value>Weigh to Health</value>
+					</category>
+				</fixed>
+			</response>			
+			<response varName="s1-q9-r8">
+				<fixed>
+					<category>
+						<label>Patient declined</label>
+						<value>Patient declined</value>
+						<contingentQuestion varName="s1-q9-r8-nested">
+							<text>Reason:</text>
+						</contingentQuestion>
+					</category>
+				</fixed>
+			</response>		
+		</question>
+	</section>
+	<section>
+		<sectionInfo>
+			<title>Summary</title>
+		</sectionInfo>
+		<question>
+			<text>Briefly summarize the outreach:</text>
+			<response varName="s2-q1-1">
+				<free>
+					<format>text</format>
+					<length>400</length>
+					<label>--</label>
+				</free>
+			</response>
+		</question>
+	</section>
+</assessment>
